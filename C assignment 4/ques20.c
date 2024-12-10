@@ -15,3 +15,4 @@ int main() {
 
     return 0;
 }
+//ques 20 is the function defination for problem at ques 19
