@@ -1,26 +1,22 @@
 #include <stdio.h>
-#include <ctype.h>
+
+void upper(char ch[]) {
+    int i = 0;
+    for (i = 0; ch[i] != '\0'; i++) {
+        if(ch[i] >= 'a' && ch[i] <= 'z') {
+            ch[i] = ch[i] - 32;  
+        }
+    }
+}
 
 int main() {
-    char *args[] = {
-        "hello", "world", "this", "is", "a", "test", NULL
+    char args[][10] = {
+        "hello", "world", "this", "is", "a", "test"
     };
-    char **ptr = args;
-    while (*ptr != NULL) {
-        char *str = *ptr;
-        
-        while (*str != '\0') {
-            *str = toupper((unsigned char)*str);
-            str++;
-        }
 
-        ptr++;
-    }
-
-    ptr = args;
-    while (*ptr != NULL) {
-        printf("%s ", *ptr);
-        ptr++;
+    for (int i = 0; i < 6; i++) {
+        upper(args[i]);
+        printf("%s ", args[i]);
     }
 
     return 0;
