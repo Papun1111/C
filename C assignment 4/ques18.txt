@@ -1,0 +1,7 @@
+The method to allocate memory for the pointers to manipulate the desired variables is as follows:
+
+Figure-1 shows an array 'arr' of integer type without any associated names.
+Figure-2 shows an array 'arr' of integer type, again without any associated names. It also shows a 'sumarr' array, which represents an elementwise sum of the 'arr' array.
+Figure-3 shows a string 'argv[]' without any associated names. The figure demonstrates how the characters of the string can be manipulated using pointers.
+
+The key points are that the variables, arrays, and strings are not given any names, and the method to manipulate them is through the use of pointers without relying on named variables. This approach allows for the manipulation of the desired data structures without the need to associate names with them.
