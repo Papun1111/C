@@ -1,0 +1,27 @@
+Query 27: Constant Pointer
+This requires a syntax where the pointer itself is constant and cannot point to another address after initialization. However, it appears the intent might have been misstated. Usually, a "constant pointer" in common C terminology refers to the pointer being constant (<data_type> * const ptr;), while a pointer that points to a constant value (const <data_type> * ptr;) is a "pointer to constant."
+
+Here, given the description "the value of the pointer is constant and pointer cannot be modified," this implies a pointer that points to a constant value and is itself constant. The right syntax for this would be:
+
+<data_type> const * const ptr; (this declares a constant pointer to a constant value).
+Correct Answer: (4) <data_type> const * const fun_ptr
+
+Query 28: Pointer to Constant
+This type of pointer does not allow modification of the value it points to. The correct options for this scenario are:
+
+const <data_type> * ptr;
+<data_type> const * ptr;
+Both declarations ensure that the value pointed by ptr cannot be altered through ptr.
+
+Correct Answers: (1) const <data_type> * ptr; (3) <data_type> const *ptr;
+
+Query 29: Pointer to Function
+A function pointer needs to be declared in such a way that it matches the function's signature and can be initialized correctly. The proper syntax for declaring and initializing a pointer to a function includes:
+
+int (*ptr)(int,int,int)=funname;
+int (*ptr)(int,int,int)=&funname;
+These ensure ptr is assigned to a function that takes three int arguments and returns an int. Both using the function name directly or the address-of operator are correct in C.
+
+Correct Answers: (1) int (*ptr)(int,int,int)=funname; (3) int (*ptr)(int,int,int)=&funname;
+
+The above responses correctly address each specific need based on standard C syntax and conventions.

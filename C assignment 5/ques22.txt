@@ -1,0 +1,16 @@
+Statement (i): p is a wild pointer
+
+A "wild pointer" refers to a pointer that has not been initialized to a definite value before it is used. In the main() function, int *p; declares a pointer but does not initialize it. This makes p indeed a wild pointer, as it points to some arbitrary memory location. Therefore, (i) is correct.
+Statement (ii): r is a NULL pointer
+
+In the main() function, int *r = NULL; explicitly initializes the pointer r to NULL. A NULL pointer is a pointer that points to nothing. Therefore, (ii) is correct.
+Statement (iii): q is a dangling pointer
+
+A "dangling pointer" arises when a pointer still holds the memory address of a dynamically allocated memory which has been deallocated. In the function fun(), the pointer q is allocated memory using malloc but is not deallocated within fun(), nor is it returned. Thus, q does not become a dangling pointer within the context of fun() since the memory pointed to by q is still allocated when fun() ends. Therefore, (iii) is incorrect.
+Statement (iv): p is a dangling pointer
+
+For a pointer to be dangling, it must have once pointed to a valid memory location that has since been deallocated. Since p has never been allocated any memory or assigned to a memory address that was later deallocated, it is not a dangling pointer. It is simply an uninitialized (wild) pointer. Therefore, (iv) is incorrect.
+Statement (v): fun() is making memory leak
+
+A memory leak occurs when dynamically allocated memory is not deallocated, leading to a loss of memory resources over time. In fun(), memory is allocated to q and never freed before fun() returns. This allocated memory is no longer accessible because q goes out of scope at the end of fun(), and there is no reference to the memory that can be used to deallocate it later. Therefore, (v) is correct.
+Conclusion: Statements (i), (ii), and (v) are correct.
